@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Commission ตัวละครโดย PRACHANMUA (พระจันทร์มัว): ราคา เงื่อนไข ขั้นตอนสั่งงาน และตัวอย่างงาน OC">
+<meta property="og:title" content="PRACHANMUA Commission">
+<meta property="og:description" content="รับวาดตัวละคร Half body, Full body และงานคู่ ดูราคาและตัวอย่างงานได้ที่นี่">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/oc-06.jpg">
+<title>PRACHANMUA Commission</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500;600&display=swap">
+<style>
+/* Layout: one calm column; hero pairs the name with a hazy moon behind the Sketch sep5 piece, then price list, terms, steps, gallery, contact */
+:root {
+  --bg: #F5F5F3;
+  --surface: #FFFFFF;
+  --ink: #1F2430;
+  --slate: #4F5D70;
+  --muted: #5F6B7B;
+  --line: #D5DAE1;
+  --mist: #E4E8EE;
+  --wood: #8F5A33;
+  --wood-fill: #8F5A33;
+  --on-wood: #F7F4EF;
+  --moon: #DCE1E8;
+  --font-display: 'Prompt', 'Noto Sans Thai', Tahoma, sans-serif;
+  --font-body: 'Noto Sans Thai', 'Prompt', Tahoma, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14171E; --surface: #1C2029; --ink: #E8EBF0; --slate: #AEB8C6; --muted: #9AA4B2;
+    --line: #2C3240; --mist: #232835; --wood: #D7A273; --wood-fill: #B97C4B; --on-wood: #14171E; --moon: #2A3040;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #14171E; --surface: #1C2029; --ink: #E8EBF0; --slate: #AEB8C6; --muted: #9AA4B2;
+  --line: #2C3240; --mist: #232835; --wood: #D7A273; --wood-fill: #B97C4B; --on-wood: #14171E; --moon: #2A3040;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: 17px; line-height: 1.7;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 48px;
+}
+.wrap { max-width: 1080px; margin: 0 auto; display: flex; flex-direction: column; gap: 88px; }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.2; text-wrap: balance; margin: 0; }
+p, ul, ol { margin: 0; }
+a { color: var(--wood); }
+:focus-visible { outline: 3px solid var(--wood); outline-offset: 3px; border-radius: 6px; }
+
+.eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--wood); }
+.section-head { display: flex; flex-direction: column; gap: 6px; margin-bottom: 28px; }
+.section-head h2 { font-size: clamp(28px, 4vw, 38px); font-weight: 600; }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: 1.05fr .95fr; gap: 48px; align-items: center; padding-top: 56px; }
+.hero-text { display: flex; flex-direction: column; gap: 20px; min-width: 0; }
+.hero h1 { font-size: clamp(44px, 8vw, 84px); font-weight: 700; letter-spacing: .02em; }
+.hero .thai-name { font-family: var(--font-display); font-size: clamp(20px, 3vw, 26px); color: var(--slate); font-weight: 500; margin-top: -8px; }
+.hero .lede { color: var(--muted); max-width: 40ch; }
+.status { align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; background: var(--wood-fill); color: var(--on-wood); font-weight: 600; padding: 8px 18px; border-radius: 999px; font-size: 15px; }
+.status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; opacity: .8; }
+.jump { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 15px; }
+.jump a { color: var(--slate); text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 2px; }
+.jump a:hover { color: var(--ink); border-color: var(--ink); }
+.hero-art { position: relative; aspect-ratio: 1 / 1; max-width: 100%; }
+.hero-art .moon { position: absolute; inset: 6% 8% 14% 10%; border-radius: 50%; background: radial-gradient(circle at 42% 40%, var(--surface) 0%, var(--moon) 58%, transparent 72%); filter: blur(6px); }
+.hero-art img { position: relative; width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .hero-art img { mix-blend-mode: normal; border-radius: 20px; } }
+:root[data-theme="dark"] .hero-art img { mix-blend-mode: normal; border-radius: 20px; }
+
+/* Price list */
+.prices { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; }
+.price-row { display: grid; grid-template-columns: 1fr auto auto; gap: 24px; align-items: baseline; padding: 22px 28px; border-top: 1px solid var(--line); }
+.price-row:first-child { border-top: none; }
+.price-row .name { font-family: var(--font-display); font-size: 21px; font-weight: 600; min-width: 0; }
+.price-row .note { display: block; font-family: var(--font-body); font-size: 14px; font-weight: 400; color: var(--muted); }
+.price-row .days { color: var(--muted); font-size: 15px; white-space: nowrap; }
+.price-row .amount { font-family: var(--font-display); font-size: 26px; font-weight: 600; color: var(--wood); font-variant-numeric: tabular-nums; white-space: nowrap; text-align: right; min-width: 6.5ch; }
+.price-row .amount small { font-size: 14px; font-weight: 500; color: var(--muted); margin-left: 4px; }
+.price-foot { margin-top: 14px; color: var(--muted); font-size: 15px; }
+
+/* Terms */
+.terms { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 28px; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+.panel h3 { font-size: 21px; font-weight: 600; color: var(--slate); }
+.panel ul { padding-left: 1.2em; display: flex; flex-direction: column; gap: 6px; }
+.panel li::marker { color: var(--wood); }
+
+/* Steps */
+.steps { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; counter-reset: step; }
+.steps li { counter-increment: step; background: var(--mist); border-radius: 18px; padding: 22px 20px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.steps li::before { content: counter(step); font-family: var(--font-display); font-weight: 600; font-size: 15px; width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; background: var(--ink); color: var(--bg); }
+.steps li span { font-size: 15.5px; line-height: 1.6; }
+
+/* Gallery */
+.gallery { columns: 3 260px; column-gap: 16px; }
+.tile { display: block; width: 100%; margin: 0 0 16px; padding: 0; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: #FFFFFF; cursor: zoom-in; break-inside: avoid; }
+.tile img { display: block; width: 100%; height: auto; transition: transform .35s ease; }
+.tile:hover img { transform: scale(1.025); }
+
+/* Lightbox */
+dialog.lb { border: none; padding: 0; background: transparent; max-width: 100vw; max-height: 100vh; width: 100vw; height: 100%; }
+dialog.lb::backdrop { background: rgba(14, 16, 22, .88); }
+.lb-inner { width: 100%; height: 100%; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 8px; padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.lb-inner img { max-width: 100%; max-height: calc(100vh - 96px); margin: 0 auto; display: block; border-radius: 12px; background: #FFFFFF; }
+.lb-btn { width: 48px; height: 48px; border-radius: 50%; border: 1px solid rgba(255,255,255,.3); background: rgba(255,255,255,.08); color: #F2F2F2; font-size: 22px; cursor: pointer; display: grid; place-items: center; }
+.lb-btn:hover { background: rgba(255,255,255,.18); }
+.lb-close { position: absolute; top: max(16px, env(safe-area-inset-top, 0px)); right: max(16px, env(safe-area-inset-right, 0px)); }
+.lb-count { position: absolute; left: 50%; transform: translateX(-50%); bottom: max(16px, env(safe-area-inset-bottom, 0px)); color: #D8DCE2; font-size: 14px; }
+
+/* Contact */
+.contact { background: var(--ink); color: var(--bg); border-radius: 24px; padding: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
+.contact h2 { font-size: clamp(26px, 4vw, 34px); font-weight: 600; }
+.contact .eyebrow { color: var(--wood-fill); }
+.contact p { opacity: .85; }
+.channels { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.channel { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; border: 1px solid color-mix(in srgb, var(--bg) 22%, transparent); border-radius: 14px; padding: 14px 18px; }
+.channel .label { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; opacity: .7; }
+.channel .value { font-family: var(--font-display); font-size: 18px; font-weight: 500; user-select: all; word-break: break-all; }
+.copy { font: inherit; font-size: 14px; font-weight: 600; background: var(--bg); color: var(--ink); border: none; border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+footer { color: var(--muted); font-size: 14px; text-align: center; margin-top: -40px; }
+
+@media (max-width: 860px) {
+  .hero { grid-template-columns: 1fr; gap: 24px; padding-top: 32px; }
+  .hero-art { max-width: 440px; width: 100%; margin: 0 auto; order: -1; }
+  .terms, .contact { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; }
+  .steps li { flex-direction: row; align-items: center; gap: 14px; }
+  .steps li::before { flex: none; }
+  .wrap { gap: 64px; }
+  .contact { padding: 28px 22px; }
+}
+@media (max-width: 480px) {
+  .price-row { grid-template-columns: 1fr auto; gap: 4px 16px; padding: 18px 20px; }
+  .price-row .days { grid-column: 1; grid-row: 2; }
+  .price-row .amount { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
+  .lb-inner { grid-template-columns: 1fr; }
+  .lb-prev, .lb-next { position: absolute; bottom: max(12px, env(safe-area-inset-bottom, 0px)); }
+  .lb-prev { left: max(16px, env(safe-area-inset-left, 0px)); }
+  .lb-next { right: max(16px, env(safe-area-inset-right, 0px)); }
+}
+@media (prefers-reduced-motion: reduce) { .tile img { transition: none; } .tile:hover img { transform: none; } }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">Character Design Commission</p>
+      <h1>PRACHANMUA</h1>
+      <p class="thai-name">พระจันทร์มัว</p>
+      <p class="status">เปิดรับงาน</p>
+      <p class="lede">รับวาดตัวละครแบบ Half body, Full body และงานคู่ ส่งไฟล์ PNG พร้อมแก้ไขระหว่างทางตามขั้นตอนด้านล่าง</p>
+      <nav class="jump" aria-label="ไปยังหัวข้อ">
+        <a href="#prices">ราคา</a><a href="#terms">ขอบเขตและเงื่อนไข</a><a href="#steps">ขั้นตอนสั่งงาน</a><a href="#works">ตัวอย่างงาน</a><a href="#contact">ติดต่อ</a>
+      </nav>
+    </div>
+    <div class="hero-art">
+      <div class="moon" aria-hidden="true"></div>
+      <img src="img/oc-06.jpg" alt="ตัวละครผมยาวสีน้ำเงินเข้ม ใส่เสื้อคอเต่าสีดำและกระโปรงยาวสีเทา ถือไม้เท้า">
+    </div>
+  </header>
+
+  <section id="prices">
+    <div class="section-head">
+      <p class="eyebrow">Price list</p>
+      <h2>ประเภทงานและราคา</h2>
+    </div>
+    <div class="prices">
+      <div class="price-row"><span class="name">Half body</span><span class="days">2 วัน</span><span class="amount">800<small>บาท</small></span></div>
+      <div class="price-row"><span class="name">Full body</span><span class="days">3 วัน</span><span class="amount">1,300<small>บาท</small></span></div>
+      <div class="price-row"><span class="name">คู่<span class="note">2 ตัวละคร</span></span><span class="days">4 วัน</span><span class="amount">1,800<small>บาท</small></span></div>
+      <div class="price-row"><span class="name">Add-on<span class="note">พื้นหลัง / ตัวละครเพิ่ม</span></span><span class="days">2 วัน</span><span class="amount">500<small>บาท</small></span></div>
+    </div>
+    <p class="price-foot">ไฟล์ต้นฉบับ PSD/CLIP เพิ่ม +500 บาท · ชำระผ่าน PromptPay</p>
+  </section>
+
+  <section id="terms">
+    <div class="section-head">
+      <p class="eyebrow">Scope &amp; terms</p>
+      <h2>ขอบเขตงานและเงื่อนไข</h2>
+    </div>
+    <div class="terms">
+      <div class="panel">
+        <h3>ขอบเขตงาน</h3>
+        <ul>
+          <li>แก้ไขได้: ขั้น sketch 3 ครั้ง, ขั้น lineart/color 2 ครั้ง</li>
+          <li>ส่งไฟล์ PNG (ขอไฟล์ต้นฉบับ PSD/CLIP เพิ่ม +500 บาท)</li>
+          <li>ใช้ส่วนตัวเท่านั้น หากใช้เชิงพาณิชย์ต้องตกลงแยก</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>เงื่อนไข / ข้อห้าม</h3>
+        <ul>
+          <li>ไม่รับ: NSFW, ล้อเลียนบุคคลจริง</li>
+          <li>ช่องทางชำระเงิน: PromptPay</li>
+          <li>มัดจำ 50% ก่อนเริ่ม sketch</li>
+          <li>ยกเลิกหลังเริ่ม sketch: มัดจำไม่คืน</li>
+          <li>ศิลปินมีสิทธิ์นำงานไปแสดงเป็นผลงาน</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="steps">
+    <div class="section-head">
+      <p class="eyebrow">How to order</p>
+      <h2>ขั้นตอนสั่งงาน</h2>
+    </div>
+    <ol class="steps">
+      <li><span>ส่งรายละเอียด: ประเภทงาน, reference ตัวละคร, อารมณ์/ท่าทาง</span></li>
+      <li><span>ศิลปินยืนยันราคาและคิว</span></li>
+      <li><span>จ่ายมัดจำ 50%</span></li>
+      <li><span>ส่ง sketch ให้ตรวจ แล้วลงสี</span></li>
+      <li><span>จ่ายส่วนที่เหลือ รับไฟล์งานสุดท้าย</span></li>
+    </ol>
+  </section>
+
+  <section id="works">
+    <div class="section-head">
+      <p class="eyebrow">Original characters</p>
+      <h2>ตัวอย่างงาน</h2>
+    </div>
+    <div class="gallery" id="gallery">
+      <button class="tile" type="button"><img src="img/oc-01.jpg" alt="ตัวละครผมดำยาว ปีกค้างคาวสีม่วง ยืนเต็มตัว" loading="lazy"></button>
+      <button class="tile" type="button"><img src="img/oc-02.jpg" alt="ตัวละครผมม่วง เขาและปีกดำ ใส่ชุดเกราะ" loading="lazy"></button>
+      <button class="tile" type="button"><img src="img/oc-03.jpg" alt="ตัวละครผมดำหางม้า เสื้อยืดสีกรม ชูสองนิ้ว" loading="lazy"></button>
+      <button class="tile" type="button"><img src="img/oc-04.jpg" alt="ตัวละครสวมหมวกแก๊ป นั่งบนสนามหญ้ากับนกขาว" loading="lazy"></button>
+      <button class="tile" type="button"><img src="img/oc-05.jpg" alt="ตัวละครชายผมบลอนด์ เล่นสเก็ตบอร์ด" loading="lazy"></button>
+      <button class="tile" type="button"><img src="img/oc-06.jpg" alt="ตัวละครผมยาวสีน้ำเงินเข้ม ใส่กระโปรงยาวสีเทา ถือไม้เท้า" loading="lazy"></button>
+      <button class="tile" type="button"><img src="img/oc-07.jpg" alt="ตัวละครผมบ๊อบดำ และตัวละครผมชมพู มีเขากวางและปีกแมลง" loading="lazy"></button>
+      <button class="tile" type="button"><img src="img/oc-08.jpg" alt="ตัวละครผมเทาตาแดงใส่สเวตเตอร์แดง และเด็กหมวกเขียวหูหางหมาป่า" loading="lazy"></button>
+      <button class="tile" type="button"><img src="img/oc-09.jpg" alt="ตัวละครชายผมเขียว แขนเป็นท่อนไม้ปกคลุมด้วยมอส" loading="lazy"></button>
+      <button class="tile" type="button"><img src="img/oc-10.jpg" alt="ตัวละครผมดำยาว ถือมีดโค้ง แลบลิ้น" loading="lazy"></button>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div>
+      <p class="eyebrow">Contact</p>
+      <h2>ติดต่อสั่งงาน</h2>
+      <p>ทักมาพร้อมประเภทงานและ reference ตัวละคร เพื่อเช็กราคาและคิวได้เร็วขึ้น</p>
+    </div>
+    <div class="channels">
+      <div class="channel"><div><div class="label">Facebook</div><div class="value">พระจันทร์มัว</div></div></div>
+      <div class="channel"><div><div class="label">Email</div><div class="value" id="email">thenouad@gmail.com</div></div><button class="copy" type="button" id="copyEmail">คัดลอก</button></div>
+    </div>
+  </section>
+
+  <footer>ผลงานทั้งหมดเป็นตัวละครต้นฉบับ (OC) ของ PRACHANMUA</footer>
+</div>
+
+<dialog class="lb" id="lb" aria-label="ดูรูปขนาดใหญ่">
+  <div class="lb-inner">
+    <button class="lb-btn lb-prev" type="button" id="lbPrev" aria-label="รูปก่อนหน้า">‹</button>
+    <img id="lbImg" src="" alt="">
+    <button class="lb-btn lb-next" type="button" id="lbNext" aria-label="รูปถัดไป">›</button>
+  </div>
+  <button class="lb-btn lb-close" type="button" id="lbClose" aria-label="ปิด">×</button>
+  <div class="lb-count" id="lbCount"></div>
+</dialog>
+
+<script>
+(function () {
+  var tiles = Array.prototype.slice.call(document.querySelectorAll('#gallery .tile'));
+  var lb = document.getElementById('lb'), img = document.getElementById('lbImg'), count = document.getElementById('lbCount');
+  var i = 0;
+  function show(n) {
+    i = (n + tiles.length) % tiles.length;
+    var t = tiles[i].querySelector('img');
+    img.src = t.getAttribute('src'); img.alt = t.alt;
+    count.textContent = (i + 1) + ' / ' + tiles.length;
+  }
+  function open(n) {
+    show(n);
+    if (typeof lb.showModal === 'function') { try { lb.showModal(); return; } catch (e) {} }
+    lb.setAttribute('open', '');
+  }
+  function close() { if (typeof lb.close === 'function') lb.close(); else lb.removeAttribute('open'); }
+  tiles.forEach(function (t, n) { t.addEventListener('click', function () { open(n); }); });
+  document.getElementById('lbPrev').addEventListener('click', function () { show(i - 1); });
+  document.getElementById('lbNext').addEventListener('click', function () { show(i + 1); });
+  document.getElementById('lbClose').addEventListener('click', close);
+  lb.addEventListener('click', function (e) { if (e.target === lb || e.target.classList.contains('lb-inner')) close(); });
+  document.addEventListener('keydown', function (e) {
+    if (!lb.open) return;
+    if (e.key === 'ArrowLeft') show(i - 1);
+    else if (e.key === 'ArrowRight') show(i + 1);
+    else if (e.key === 'Escape') close();
+  });
+
+  var btn = document.getElementById('copyEmail'), email = document.getElementById('email');
+  btn.addEventListener('click', function () {
+    var text = email.textContent.trim();
+    function done() { btn.textContent = 'คัดลอกแล้ว'; setTimeout(function () { btn.textContent = 'คัดลอก'; }, 1800); }
+    function fallback() {
+      var r = document.createRange(); r.selectNodeContents(email);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'เลือกข้อความแล้ว';
+    }
+    try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+  });
+})();
+</script>
+
+</body>
+</html>
